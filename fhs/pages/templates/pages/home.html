@@ -1,4 +1,6 @@
 {% block content %}
+{% load static %} 
+
     <h1> Food </h1>
 
     {% if user.is_authenticated %}
@@ -6,6 +8,7 @@
         
         <a href="{% url 'logout' %}">Logout?</a>
     </div>
+    <a href="{% url 'healthy' %}">healthy?</a>
     {% else %}
     <div class="alert alert-success" role="alert">
         <a href="login/">login</a>
@@ -17,19 +20,19 @@
     action="{% url 'search' %}">
     {% csrf_token %}
     <input type="search" placeholder="Search" aria-label="Search" name="searched">
-    <button type="submit">Search</button>
+    
 </form>
 
 </br>
-{% for foods in foods%}
-{{foods.Food_name}}<br>
-{{foods.Description}}<br>
-{{foods.Food_price}}<br>
-<img src="{{foods.Image.url}}"><br>
-{{foods.Calories}}<br>
-
-{% endfor%}
-
+{% for food in foods %}
+    {{food.Food_name}}<br>
+    {{food.Description}}<br>
+    {{food.Food_price}}<br>
+    <img src="{{food.Image.url}}"><br>
+    {{food.Calories}}<br>
+    <button type="submit" onclick="location.href={% url 'cart'%}">add to cart</button><br>
+    
+{% endfor %}
 </br>
     {% for food in food_list %}
         {{food.Food_name}}<br>
@@ -37,6 +40,6 @@
         {{food.Food_price}}<br>
         <img src="{{food.Image.url}}"><br>
         {{food.Calories}}<br>
-        
+        <button type="submit">add to cart</button><br>
     {% endfor %}
 {% endblock %}

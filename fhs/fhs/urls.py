@@ -25,9 +25,11 @@ urlpatterns = [
     path('', views.food, name='home'),
     path('register/', views.register, name='register'),
     path('search/', views.search_food, name='search'),
-    path('login/', auth_views.LoginView.as_view(template_name='pages/login.html'), name='login'),
-    path('search/login/', auth_views.LoginView.as_view(template_name='pages/login.html')),
+    path('login/', auth_views.LoginView.as_view(template_name='pages/login1.html'), name='login'),
+    path('search/login/', auth_views.LoginView.as_view(template_name='pages/login1.html')),
     path('logout/', auth_views.LogoutView.as_view(template_name=' '), name='logout'),
+    path('profile/',views.profile,name='profile'),
+    path('cart/',views.cart,name='cart'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

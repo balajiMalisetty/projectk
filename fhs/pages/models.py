@@ -26,3 +26,13 @@ class Food(models.Model):
 
     def __str__(self):
         return self.Food_name
+
+class Cart(models.Model):
+    Food_name = models.CharField(max_length=200)
+    Description = models.TextField(default='-', blank=True)
+    Food_price = models.DecimalField(default='-',max_digits=10, decimal_places=2)
+    Image = models.ImageField(null=True,blank=True,upload_to='images/')
+    Calories = models.DecimalField(default=0, max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return self.Food_name

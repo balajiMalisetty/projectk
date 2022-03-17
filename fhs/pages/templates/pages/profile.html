@@ -1,0 +1,16 @@
+{% if user.is_authenticated %}
+<div class="alert alert-success" role="alert">
+
+    <p>Name:{{user.username}}</p>
+    <p>Height:{{user.height}}</p>
+    <p>weight:{{user.weight}}</p>
+    <p>Age:{{user.age}}</p>
+    <p>Calories:{{user.calories}}</p>
+</div>
+
+{% else %}
+<div class="alert alert-success" role="alert">
+    <p>login 1st</p>
+</div>
+
+{% endif %}
