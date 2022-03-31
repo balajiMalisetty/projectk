@@ -269,8 +269,218 @@ color: #FFFFFF;
     object-fit: cover;
 }
 
+
+
+/***********************   DIET PAGE      ***************************/
+
+
+.dietitems
+{
+
+    margin-top: 10px;
+    height: fit-content;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.singledietitem
+{
+    background-color: #FFFFFF;
+    width: 90%;
+    padding-bottom: 70px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+
+}
+
+.decoratordietname
+{
+
+width: 35px;
+height: 0px;
+
+border: 3px solid #FA7F3A;
+border-radius: 50px;
+transform: rotate(-90deg);
+
+}
+.Diettitlename
+{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #000000;
+}
+.diettitlefill
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Dietdescription
+{
+    width: 96%;
+    margin-top: 0px;
+    margin-left: 40px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #000000;
+
+
+}
+
+.dietitemtopsection
+{
+    margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 90%;
+	align-self: center;
+}
+.dietitemnameoffood
+{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 39px;
+text-align: center;
+
+color: #000000;
+
+}
+
+.dietitempriceoffood
+{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 39px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+
+
+
+.dietitembottomsection
+{
+    margin-left: 8%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.dietitemfooditem
+{
+    display: flex;
+    background-color: rgb(246, 246, 246);
+    width: 19%;
+    margin-right: 1%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+.dietitemfoodimg
+{
+    width: 80%;
+    height: 200px;
+    background-color: #00A843;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+
+.dietitemfoodname
+{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 39px;
+text-align: center;
+margin-bottom: 0;
+color: #000000;
+
+
+}
+.dietitemfoodcalories
+{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    color: #41a43e;
+    margin-top: 0px;
+   margin-bottom: 35px;
+}
+.dietitemfoodprice
+{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    color: #757575;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.dietitemcostanddtocart
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.dietfullcostofdiet {
+    text-decoration: line-through;
+    color: #9f9f9f;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.dietfullcostbeforeoffer{
+    margin-top: 0;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bgloginimg
-{    height: 722.44px;
+{    height: 722.44;
     position: absolute;
     right: 0;
     z-index: -1;
@@ -279,19 +489,6 @@ color: #FFFFFF;
 
 }
 
-.navbar
-{
-    z-index: 2;
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    left: 0px;
-    top: 0px;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 6px 24px rgba(172, 172, 172, 0.12);
-
-}
 
 .logoind
 {
@@ -359,10 +556,6 @@ color: #383838;
     left: 307px;
     top: 728px;
     border: none;
-
-    color: #FFFFFF;
-    font-family: poppins;
-    font-weight: 500;
     
     background: #08C052;
     box-shadow: 13px 10px 15px rgba(4, 176, 73, 0.23);
@@ -371,7 +564,7 @@ color: #383838;
 }
 
 .loginform{
-    margin-left : 100px;
+    margin-left : 100;
 }
 
 .notreglregwaff
@@ -388,51 +581,191 @@ bba
     color: #08C052;
 }
 
-.navmenu
-{
-    margin-left: 800px;
-    margin-top: 16px;
-    display: inline-flex;
-}
-.navtextbutton
-{
-    font-family: poppins;
 
-    margin-right: 50px;
-}
-.navtextbutton:hover
+/* **************** cart page  **************** */
+
+.cartitemsingleitem
 {
-    color: #08C052;
+    margin-top: 10px;
+    width: 70%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.cartaddeditemname
+{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+.cartaddeditemprice
+{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.cartaddeditemqyt
+{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+orange
+{
+    color: #DB4F01;
+}
+
+.cartaddeditemsumprice
+{
+    font-size: 18px;
+    color: #00A843;
+    font-weight: 600;
+}
+
+
+.leftofcartitem
+{
+    margin-left: 10%;
+}
+.addsubtaractqyt
+{
+    display: flex;
+}
+.removeitembuttoincart
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.removeitemcarticon
+{
+    margin-left: 6px;
+}
+
+.removeitemtextofbutton
+{
+    font-size: 12px;
     font-weight: 500;
 }
-
-.navregilon
+.removeitembuttoincart
 {
-    font-size: 16px;
-    font-family: poppins;
-    font-weight: 400;
-    right: 50px;
-    position: absolute;
-    top:12px;
-    color:#940202;
 
-}
-
-
-.Loginbutoon:hover{
-    background-color: #005c25;
-}
-
-.menubgsearch
-{
-      
-    margin-top: 85px;
+    margin-top: 10px;
     width: 100%;
-    height: fit-content;
-    padding-top: 30px;
-    padding-bottom: 100px;
-    background-color: #F9F9F9;
+    height: 34%;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    border: 1px solid #BABABA;
+    /* padding-left: 10%; */
+    /* padding-left: 0%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightofcartitem
+{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 10%;
+}
+
+.addlessbutton
+{
+   
+height: 50px;
+width: 50px;
+color: #FFFFFF;
+background: #2F2F2F;
+border: 1.03808px solid #EEEEEE;
+box-sizing: border-box;
+border-radius: 10px;
+}
+.addaddlessbutton
+{
+    height: 50px;
+width: 50px;
+color: #FFFFFF;
+background: #00A843;
+
+border: 1.03808px solid #EEEEEE;
+box-sizing: border-box;
+border-radius: 10px;
+}
+
+.quantytydisplaybutton{
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartpagecartsection
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #F9F9F9;
+    margin-top: 10px;
+    padding-bottom: 40px;
+}
+.cartitemsselectedtoadd
+{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.cartbillsection
+
+{    margin-top: 60px;
+    margin-left: -24%;
+    background: #ffffff;
+    width: fit-content;
+    padding-left: 4%;
+    height: fit-content;
+    padding-right: 4%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.totalpriceofordertext
+{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+
+}
+.totalpriceoforder
+{
+    font-size: 24px;
+    font-weight: 600;
+    /* margin-bottom: 0; */
+    color: #00A843;
+    margin-top: 0;
+}
+.proceedtopaymmentbutton
+{
+    background-color: #00A843;
+    color: #ffffff;
+    padding: 19px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: 500;
+
 }

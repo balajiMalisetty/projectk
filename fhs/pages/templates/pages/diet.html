@@ -1,0 +1,119 @@
+{% extends 'pages/navbar.html' %}
+
+{% load static %} 
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+{%block content%}
+<body>
+    
+    <div class="bannersetion"></div>
+
+<div class="dietitems">
+    {% for food in diet_list %}
+    <div class="singledietitem">
+        <div class="dietitemtopsection">
+
+            <div class="diettitlefill">
+                <div class="decoratordietname"></div>
+                <p class="Diettitlename">{{food.Food_name}}</p>
+            </div>
+            <p class="Dietdescription">
+                {{food.Description}}
+
+            </p>
+        
+        </div>
+
+        <div class="dietitembottomsection">
+            <div class="dietitemfooditem">
+
+                
+                  <img class="dietitemfoodimg" src="{{food.Image.url}}">
+                
+                <p class="dietitemfoodname">{{food.Breakfast}}</p>
+                <p class="dietitemfoodprice">Rs {{food.price}}</p>
+                <p class="dietitemfoodcalories">cal :{{food.calories}}</p>
+               
+
+            </div>
+            <div class="dietitemfooditem">
+
+                <img class="dietitemfoodimg" src="{{food.Image1.url}}">
+                <p class="dietitemfoodname">{{food.Lunch}}</p>
+                <p class="dietitemfoodprice">Rs {{food.price1}}</p>
+                <p class="dietitemfoodcalories">cal :{{food.calories1}}</p>
+               
+
+            </div>
+            <div class="dietitemfooditem">
+
+                <img class="dietitemfoodimg" src="{{food.Image2.url}}">
+                <p class="dietitemfoodname">{{food.Snack}}</p>
+                <p class="dietitemfoodprice">Rs {{food.price2}}</p>
+                <p class="dietitemfoodcalories">cal :{{food.calories2}}</p>
+               
+
+            </div>
+            <div class="dietitemfooditem">
+
+                <img class="dietitemfoodimg" src="{{food.Image3.url}}">
+                <p class="dietitemfoodname">{{food.Dinner}}</p>
+                <p class="dietitemfoodprice">Rs {{food.price3}}</p>
+                <p class="dietitemfoodcalories">cal :{{food.calories3}}</p>
+               
+
+            </div>
+
+            <div class ="dietitemcostanddtocart">
+                <a href="{% url 'add_item_diet' food.id %}">
+                <svg width="100%" height="194" viewBox="0 0 180 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_95_245)">
+                <rect x="24" y="24" width="132" height="146" rx="12" fill="#FA7F3A" fill-opacity="0.15" shape-rendering="crispEdges"/>
+                </g>
+                <g filter="url(#filter1_d_95_245)">
+                <rect x="43" y="41" width="94" height="112" rx="12" fill="#FA7F3A"/>
+                </g>
+                <path d="M66.66 113.144C66.468 112.792 66.204 112.524 65.868 112.34C65.532 112.156 65.14 112.064 64.692 112.064C64.196 112.064 63.756 112.176 63.372 112.4C62.988 112.624 62.688 112.944 62.472 113.36C62.256 113.776 62.148 114.256 62.148 114.8C62.148 115.36 62.256 115.848 62.472 116.264C62.696 116.68 63.004 117 63.396 117.224C63.788 117.448 64.244 117.56 64.764 117.56C65.404 117.56 65.928 117.392 66.336 117.056C66.744 116.712 67.012 116.236 67.14 115.628H64.26V114.344H68.796V115.808C68.684 116.392 68.444 116.932 68.076 117.428C67.708 117.924 67.232 118.324 66.648 118.628C66.072 118.924 65.424 119.072 64.704 119.072C63.896 119.072 63.164 118.892 62.508 118.532C61.86 118.164 61.348 117.656 60.972 117.008C60.604 116.36 60.42 115.624 60.42 114.8C60.42 113.976 60.604 113.24 60.972 112.592C61.348 111.936 61.86 111.428 62.508 111.068C63.164 110.7 63.892 110.516 64.692 110.516C65.636 110.516 66.456 110.748 67.152 111.212C67.848 111.668 68.328 112.312 68.592 113.144H66.66ZM71.7189 113.384C71.9349 113.032 72.2149 112.756 72.5589 112.556C72.9109 112.356 73.3109 112.256 73.7589 112.256V114.02H73.3149C72.7869 114.02 72.3869 114.144 72.1149 114.392C71.8509 114.64 71.7189 115.072 71.7189 115.688V119H70.0389V112.352H71.7189V113.384ZM74.4585 115.652C74.4585 114.98 74.5905 114.384 74.8545 113.864C75.1265 113.344 75.4905 112.944 75.9465 112.664C76.4105 112.384 76.9265 112.244 77.4945 112.244C77.9905 112.244 78.4225 112.344 78.7905 112.544C79.1665 112.744 79.4665 112.996 79.6905 113.3V112.352H81.3825V119H79.6905V118.028C79.4745 118.34 79.1745 118.6 78.7905 118.808C78.4145 119.008 77.9785 119.108 77.4825 119.108C76.9225 119.108 76.4105 118.964 75.9465 118.676C75.4905 118.388 75.1265 117.984 74.8545 117.464C74.5905 116.936 74.4585 116.332 74.4585 115.652ZM79.6905 115.676C79.6905 115.268 79.6105 114.92 79.4505 114.632C79.2905 114.336 79.0745 114.112 78.8025 113.96C78.5305 113.8 78.2385 113.72 77.9265 113.72C77.6145 113.72 77.3265 113.796 77.0625 113.948C76.7985 114.1 76.5825 114.324 76.4145 114.62C76.2545 114.908 76.1745 115.252 76.1745 115.652C76.1745 116.052 76.2545 116.404 76.4145 116.708C76.5825 117.004 76.7985 117.232 77.0625 117.392C77.3345 117.552 77.6225 117.632 77.9265 117.632C78.2385 117.632 78.5305 117.556 78.8025 117.404C79.0745 117.244 79.2905 117.02 79.4505 116.732C79.6105 116.436 79.6905 116.084 79.6905 115.676ZM84.7033 113.324C84.9193 113.004 85.2153 112.744 85.5913 112.544C85.9753 112.344 86.4113 112.244 86.8993 112.244C87.4673 112.244 87.9793 112.384 88.4353 112.664C88.8993 112.944 89.2633 113.344 89.5273 113.864C89.7993 114.376 89.9353 114.972 89.9353 115.652C89.9353 116.332 89.7993 116.936 89.5273 117.464C89.2633 117.984 88.8993 118.388 88.4353 118.676C87.9793 118.964 87.4673 119.108 86.8993 119.108C86.4033 119.108 85.9673 119.012 85.5913 118.82C85.2233 118.62 84.9273 118.364 84.7033 118.052V119H83.0233V110.12H84.7033V113.324ZM88.2193 115.652C88.2193 115.252 88.1353 114.908 87.9673 114.62C87.8073 114.324 87.5913 114.1 87.3193 113.948C87.0553 113.796 86.7673 113.72 86.4553 113.72C86.1513 113.72 85.8633 113.8 85.5913 113.96C85.3273 114.112 85.1113 114.336 84.9433 114.632C84.7833 114.928 84.7033 115.276 84.7033 115.676C84.7033 116.076 84.7833 116.424 84.9433 116.72C85.1113 117.016 85.3273 117.244 85.5913 117.404C85.8633 117.556 86.1513 117.632 86.4553 117.632C86.7673 117.632 87.0553 117.552 87.3193 117.392C87.5913 117.232 87.8073 117.004 87.9673 116.708C88.1353 116.412 88.2193 116.06 88.2193 115.652ZM101.18 119H99.4995L95.6955 113.252V119H94.0155V110.612H95.6955L99.4995 116.372V110.612H101.18V119ZM105.792 119.108C105.152 119.108 104.576 118.968 104.064 118.688C103.552 118.4 103.148 117.996 102.852 117.476C102.564 116.956 102.42 116.356 102.42 115.676C102.42 114.996 102.568 114.396 102.864 113.876C103.168 113.356 103.58 112.956 104.1 112.676C104.62 112.388 105.2 112.244 105.84 112.244C106.48 112.244 107.06 112.388 107.58 112.676C108.1 112.956 108.508 113.356 108.804 113.876C109.108 114.396 109.26 114.996 109.26 115.676C109.26 116.356 109.104 116.956 108.792 117.476C108.488 117.996 108.072 118.4 107.544 118.688C107.024 118.968 106.44 119.108 105.792 119.108ZM105.792 117.644C106.096 117.644 106.38 117.572 106.644 117.428C106.916 117.276 107.132 117.052 107.292 116.756C107.452 116.46 107.532 116.1 107.532 115.676C107.532 115.044 107.364 114.56 107.028 114.224C106.7 113.88 106.296 113.708 105.816 113.708C105.336 113.708 104.932 113.88 104.604 114.224C104.284 114.56 104.124 115.044 104.124 115.676C104.124 116.308 104.28 116.796 104.592 117.14C104.912 117.476 105.312 117.644 105.792 117.644ZM119.708 112.352L117.764 119H115.952L114.74 114.356L113.528 119H111.704L109.748 112.352H111.452L112.628 117.416L113.9 112.352H115.676L116.924 117.404L118.1 112.352H119.708Z" fill="white"/>
+                <path d="M103.333 70H76.6667C75.7462 70 75 70.7462 75 71.6667V95C75 95.9205 75.7462 96.6667 76.6667 96.6667H103.333C104.254 96.6667 105 95.9205 105 95V71.6667C105 70.7462 104.254 70 103.333 70Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M95 76.6665C95 79.4279 92.7614 81.6665 90 81.6665C87.2386 81.6665 85 79.4279 85 76.6665" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_d_95_245" x="0" y="0" width="180" height="194" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="12"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.829167 0 0 0 0 0.344533 0 0 0 0 0.048368 0 0 0 0.12 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_95_245"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_95_245" result="shape"/>
+                </filter>
+                <filter id="filter1_d_95_245" x="19" y="17" width="142" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset/>
+                <feGaussianBlur stdDeviation="12"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0.829167 0 0 0 0 0.344533 0 0 0 0 0.048368 0 0 0 0.12 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_95_245"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_95_245" result="shape"/>
+                </filter>
+                </defs>
+                </svg></a>
+                <p class="dietfullcostofdiet">Rs {{food.Tprice}}</p>
+                <p class="dietfullcostbeforeoffer">Rs {{food.Food_price}}</p>
+
+            
+            </div>
+                
+        </div>
+
+        
+
+    </div>
+    {% endfor %}
+
+
+</div>
+
+</body>
+{%endblock%}

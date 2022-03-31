@@ -29,7 +29,12 @@ urlpatterns = [
     path('search/login/', auth_views.LoginView.as_view(template_name='pages/login1.html')),
     path('logout/', auth_views.LogoutView.as_view(template_name=' '), name='logout'),
     path('profile/',views.profile,name='profile'),
-    path('cart/',views.cart,name='cart'),
+    path('cart/', views.cart, name='cart'),
+    path('cart/add/<int:food_id>', views.add_cart, name='add_item'),
+    path('cart/add_diet/<int:food_id>', views.add_cart_diet, name='add_item_diet'),
+    path('cart/remove/<int:product_id>', views.cart_remove, name='cart_remove'),
+    path('cart/remove_product/<int:product_id>', views.cart_remove_product, name='cart_remove_product'), 
+    path('diet/',views.diet,name='diet'),   
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
