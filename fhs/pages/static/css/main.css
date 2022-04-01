@@ -769,3 +769,48 @@ border-radius: 10px;
     font-weight: 500;
 
 }
+
+
+
+/* ****************************** empty cart ********************** */
+
+
+.emptycartillustration
+{
+    height: 50%;
+    width: 50%;
+    
+
+}
+.emptycartillu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.gotomenuincart
+{
+    margin-top: -10%;
+    width: 10%;
+    border: 0;
+    height: 44px;
+    background: #FA7F3A;
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.gotomenuincart:hover{
+    margin-top: -10.1%;
+    width: 10%;
+    border: 0;
+    height: 44px;
+    background: #FA7F3A;
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0px 5px 11px rgba(255, 92, 0, 0.26);
+    /* animation-duration: 4s; */
+}
+
+
